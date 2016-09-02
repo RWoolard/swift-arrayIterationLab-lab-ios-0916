@@ -17,7 +17,7 @@
 
 
 
-
+var ingredientsAddedToCart: [String] = ["Chips", "Salsa", "Guacamole", "Red Wine"]
 
 
 /*: question2
@@ -25,7 +25,7 @@
  */
 // write your code here
 
-
+var cartNumberList: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -37,6 +37,9 @@
 // write your code here
 
 
+for order in cartNumberList {
+    print(order)
+}
 
 
 
@@ -47,7 +50,9 @@
  */
 // write your code here
 
-
+for cart in ingredientsAddedToCart {
+    print("You've added \(cart) to your cart!")
+}
 
 
 
@@ -59,9 +64,13 @@
 // write your code here
 
 
+func whatsInMyCart(item: Array<String>) {
+    for i in item {
+        print(i)
+    }
+}
 
-
-
+whatsInMyCart(ingredientsAddedToCart)
 
 
 /*: question6
@@ -69,20 +78,37 @@
  */
 // write your code here
 
+func greetings(name: Array<String>) {
+    for i in name {
+        print("Good Morning \(i).")
+        if i == "Michael" {
+            print("Top of the morning \(i)!")
+        }
+    }
+}
 
-
-
-
+var greetingsTest = ["John", "Jim", "Michael", "Chris"]
+greetings(greetingsTest)
 
 /*: question7
  ### 7. Create a function that takes an array of Ints (40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49) and returns an array of Ints. This function should look through the array of Ints and create a new array of Ints that only contain integers less than 50.
  */
 // write your code here
 
+let ages = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52]
+var youngsters: [Int] = []
+
+func belowFiftyClub(number: Array<Int>) -> Array<Int>{
+    for i in number {
+        if i < 50 {
+            youngsters.append(i)
+                }
+    }
+    return youngsters
+}
 
 
-
-
+belowFiftyClub(ages)
 
 
 
